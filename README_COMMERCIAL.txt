@@ -15,3 +15,12 @@ Commercial changes:
 Important: this is the commercial PWA/native-ready MVP source. Native iOS/Android project folders are intentionally not bundled because Capacitor dependencies must be installed in a normal Node/Xcode/Android Studio development environment before `npx cap add ios/android`.
 
 Visual in this file was generated with Microsoft Copilot.
+
+
+Commercial MVP v2 - Flexible Inspection Parties
+- Replaced fixed RSS Representative and Contractor Representatives fields with neutral commercial party records.
+- Inspection conducted by: name, organisation and selectable role.
+- Works inspected / Responsible party: representative name, organisation and selectable role.
+- Role lists support Consultant RSS, Main Contractor, Subcontractor, Safety Officer, Site Agent, Engineer, Specialist Contractor, Supplier and Other.
+- PDF metadata and e-signature sign-off use the selected inspector identity.
+- Older locally saved records remain readable through fallback mapping of previous inspector/contractorRepresentative fields.

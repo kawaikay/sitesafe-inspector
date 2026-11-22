@@ -4,7 +4,7 @@ SiteSafe Inspector is designed as an offline-first construction safety inspectio
 
 ## Data handled
 - Project and report reference information
-- Inspector and contractor representative names entered by the user
+- Inspector name, organisation and role, plus the works-responsible-party representative, organisation and role entered by the user
 - Inspection selections, remarks and signatures
 - Site photographs captured or selected by the user
 - Optional company name, team name and company logo
