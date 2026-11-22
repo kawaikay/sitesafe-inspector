@@ -24,3 +24,21 @@ Commercial MVP v2 - Flexible Inspection Parties
 - Role lists support Consultant RSS, Main Contractor, Subcontractor, Safety Officer, Site Agent, Engineer, Specialist Contractor, Supplier and Other.
 - PDF metadata and e-signature sign-off use the selected inspector identity.
 - Older locally saved records remain readable through fallback mapping of previous inspector/contractorRepresentative fields.
+
+
+Commercial MVP v3 - Authentication and Subscription Licence
+- Added Supabase email/password account creation, email confirmation, sign-in, password reset and sign-out.
+- Added licence gate backed by the protected public.subscriptions table and the authenticated user ID.
+- Active/trialing licences unlock the inspection application. Inactive or missing licences show the live Stripe HK$38/month subscription link.
+- Added a 30-day/server-defined offline licence cache based on offline_license_until/current_period_end.
+- Existing IndexedDB reports and photos remain locally stored and are not uploaded to Supabase.
+- Added account/licence status dialog and refresh function.
+- Updated service-worker cache to commercial-v3-auth and caches the Supabase client after the first successful online load.
+
+First production test sequence:
+1. Upload all extracted files to the sitesafe-inspector GitHub repository root.
+2. Open the PWA online and create an account.
+3. Confirm the Supabase email and sign in.
+4. Subscribe through Stripe using exactly the same email.
+5. Return to SiteSafe and tap I have paid - Refresh licence.
+6. Confirm public.subscriptions contains the user-linked active licence.

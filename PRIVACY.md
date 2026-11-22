@@ -10,7 +10,7 @@ SiteSafe Inspector is designed as an offline-first construction safety inspectio
 - Optional company name, team name and company logo
 
 ## Sharing
-The app does not intentionally transmit inspection data to a central service in this commercial MVP. Data leaves the device only when the user explicitly exports, prints or shares a report or image, subject to the destination service selected by the user.
+Account email, authentication session and subscription/licence status are processed through Supabase and Stripe to control paid access. Inspection records, photographs, remarks, signatures and generated report content remain locally on the device unless the user explicitly exports or shares them. Data leaves the device only when the user explicitly exports, prints or shares a report or image, subject to the destination service selected by the user.
 
 ## Retention
 Saved inspections remain on the device until deleted by the user or removed with browser/app storage.
